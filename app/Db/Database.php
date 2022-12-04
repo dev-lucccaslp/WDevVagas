@@ -17,7 +17,7 @@ class Database{
     const USER = 'root';
     
     //SENHA DO BANCO
-    const PASS = 'teste123';
+    const PASS = '';
 
     //TABELA A SER MANIPULADA
     private $table;
@@ -43,7 +43,7 @@ class Database{
 
     //METODOS RESPONSAVEIS POR EXECUTAR QUERIES DENTRO DB
     public function execute ($query, $params = []){
-        try{
+        try {
             $statement = $this->connection->prepare($query);
             $statement-> execute($params);
             return $statement;
